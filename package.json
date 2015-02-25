@@ -1,0 +1,32 @@
+{
+  "name": "woot-alert",
+  "version": "1.0.0",
+  "description": "> Alert when certain items show up on woot.com",
+  "main": "config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jrf0110/woot-alert.git"
+  },
+  "author": "John Fawcett",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jrf0110/woot-alert/issues"
+  },
+  "homepage": "https://github.com/jrf0110/woot-alert",
+  "dependencies": {
+    "koa": "^0.18.0",
+    "koa-body": "^1.0.1",
+    "lodash": "^3.3.0",
+    "superagent": "^0.21.0"
+  },
+  "devDependencies": {
+    "alias-module": "^1.0.1",
+    "mocha": "^2.1.0"
+  }
+}
