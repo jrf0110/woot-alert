@@ -4,7 +4,7 @@ var utils   = require('../../lib/utils');
 module.exports = stampit();
 
 var stamps = {
-  fetch: require('./fetch')
+
 };
 
 module.exports = module.exports.compose.apply(

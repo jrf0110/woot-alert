@@ -5,16 +5,20 @@ module.exports = require('stampit')()
   .state({
     events: []    
   })
+  .enclose( function(){
+    if ( !this.res ){
+      throw new Error('Cannot parse events without setting `res`');
+    }
+
+    if ( !Array.isArray( this.res.body ) ){
+      throw new Error('Invalid response body');
+    }
+
+    this.parseEvents();
+    delete this.res;
+  })
   .methods({
     parseEvents: function(){
-      if ( !this.res ){
-        throw new Error('Cannot parse events without setting `res`');
-      }
-
-      if ( !Array.isArray( this.res.body ) ){
-        throw new Error('Invalid response body');
-      }
-
       this.events = this.res.body.map( this.parseEvent.bind( this ) );
 
       return this;
